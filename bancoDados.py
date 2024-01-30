@@ -6,12 +6,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Certifique-se de que as variáveis de ambiente estão definidas corretamente
-host = os.environ.get('DB_HOST', 'localhost')
-user = os.environ.get('DB_USER', 'root')
-password = os.environ.get('DB_PASSWORD', '')
+host = os.environ.get('DB_HOST', 'localhost')  #nome do seu servidor
+user = os.environ.get('DB_USER', 'root')       #usuario do seu servidor
+password = os.environ.get('DB_PASSWORD', '')   #senha do seu servidor
 
 # Solicita o nome do banco de dados
-database = input("Digite o nome do banco de dados: ")
+database = input("Digite o nome do banco de dados: ") #cria o nome do banco de dados ou adicona na existente
 
 # Conecta ao servidor MySQL
 mydb = pymysql.connect(
@@ -37,9 +37,9 @@ mydb = pymysql.connect(
 )
 
 # Solicita o nome da tabela
-table_name = input("Digite o nome da tabela: ")
+table_name = input("Digite o nome da tabela: ") cria tabela ou adicona na existente
 
-# Cria uma tabela se não existir
+# Cria uma tabela se não existir e campos
 with mydb.cursor() as cursor:
     cursor.execute(
         f'CREATE TABLE IF NOT EXISTS {table_name} ('
@@ -51,6 +51,8 @@ with mydb.cursor() as cursor:
         'PRIMARY KEY (id)'
         ') '
     )
+
+
 
 # Solicita a quantidade de registros a serem inseridos
 num_registros = int(input("Digite a quantidade de registros a serem inseridos: "))
