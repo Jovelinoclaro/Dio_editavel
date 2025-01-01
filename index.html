@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto DIO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            display: block;
+            background: #f4f4f4;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        ul {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projeto DIO</h1>
+    </header>
+    <div class="container">
+        <h2>Descrição do Projeto</h2>
+        <p>O Projeto DIO é uma aplicação para cadastrar dados no sistema de Distribuidores Internos de Fibra Óptica, mais conhecidos como DIO.</p>
+
+        <h2>Passos para Configuração</h2>
+        <ol>
+            <li>
+                <strong>Criação do banco de dados:</strong> Você pode criar o banco de dados manualmente ou com o arquivo Python disponível.
+                <ul>
+                    <li>Localize o arquivo: <code>bancoDados.py</code>.</li>
+                    <li>Execute o arquivo para criar a estrutura do banco de dados automaticamente.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Estrutura SQL para a tabela:</strong> Caso prefira criar manualmente, use o comando SQL abaixo:
+                <code>
+CREATE TABLE IF NOT EXISTS `lab_01` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `dio_fibra` int NOT NULL,
+  `dio_a` varchar(220) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `dio_b` varchar(220) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `dio_c` varchar(220) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                </code>
+            </li>
+            <li>
+                <strong>Editar dados:</strong> Ao clicar na opção <em>Editar</em> dentro da aplicação, os dados serão editados e salvos no mesmo local automaticamente.
+            </li>
+        </ol>
+
+        <h2>Continue...</h2>
+        <p>Continue o desenvolvimento adicionando as funcionalidades necessárias ao sistema.</p>
+    </div>
+    <footer>
+        <p>Desenvolvido por Jovelino</p>
+    </footer>
+</body>
+</html>
